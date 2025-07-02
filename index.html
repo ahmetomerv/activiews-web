@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activiews – Better fitness visuals for your Apple workouts</title>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+  <link rel="icon" href="assets/favicons/favicon.ico">
+  <link rel="manifest" href="assets/favicons/site.webmanifest">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    @keyframes pulse-green {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+    
+    .pulse-green-animation {
+      animation: pulse-green 2s ease-in-out infinite, gradient-shift 3s ease infinite;
+      border-radius: 8px;
+      padding: 3px;
+      background: linear-gradient(45deg, #10b981, #34d399, #059669, #22d3ee, #047857);
+      background-size: 200% 200%;
+    }
+    
+    .moving-green-gradient {
+      background: linear-gradient(45deg, #10b981, #059669, #047857, #065f46, #064e3b);
+      background-size: 400% 400%;
+      animation: gradient-shift 3s ease infinite;
+    }
+    
+    @keyframes gradient-shift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+    .asap-navbar-logo {
+      font-family: "Asap", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 700;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+    body {
+      font-family: "Asap", sans-serif;
+      font-optical-sizing: auto;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+  <!-- Navbar -->
+  <nav class="flex justify-center px-6 py-4 shadow-sm bg-white">
+    <div class="w-3/4 flex items-center justify-between mx-auto">
+      <div class="flex items-center space-x-2">
+        <!-- Logo Image and Brand as Link -->
+        <a href="index.html" class="flex items-center space-x-2">
+          <img src="assets/logo.png" alt="Activiews Logo" class="w-10 h-10">
+          <span class="font-bold text-lg asap-navbar-logo">Activiews</span>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <!-- Social Links with Font Awesome -->
+        <a href="https://x.com/activiews_app" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-blue-400" aria-label="Twitter" target="_blank" rel="noopener">
+          <i class="fa-brands font-bold fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/activiews/" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-pink-500" aria-label="Instagram" target="_blank" rel="noopener">
+          <i class="fa-brands font-bold fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="max-w-3xl mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Better fitness visuals for your Apple workouts</h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-8">Turn your walking, running, and cycling workouts into visual memories. No account required. No server. Everything stays on your device. Activiews is your privacy-first fitness companion for beautiful workout maps, cards, and stats.</p>
+    <div class="flex justify-center mb-8">
+      <!-- App Store Badge -->
+      <a href="https://apps.apple.com/de/app/activiews/id6747010245" class="inline-block pulse-green-animation" target="_blank" rel="noopener">
+        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14" style="border-radius: 8px;">
+      </a>
+    </div>
+    <!-- Screenshot Banner -->
+    <div class="w-full flex items-center justify-center mb-8">
+      <img src="assets/banner.png" alt="App Screenshots Banner" class="max-w-full h-auto rounded-xl">
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-gray-50 py-12">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-2xl font-bold text-center mb-8">What Users Are Saying</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
+            <i class="fa-solid fa-user text-blue-400 text-2xl"></i>
+          </div>
+          <p class="text-gray-700 italic mb-2">"Nice ❤️"</p>
+          <span class="text-sm font-semibold text-gray-500">– @divyenduz</span>
+        </div>
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
+            <i class="fa-solid fa-user text-blue-400 text-2xl"></i>
+          </div>
+          <p class="text-gray-700 italic mb-2">"fitness app does not have that feature and I really miss that"</p>
+          <span class="text-sm font-semibold text-gray-500">– Bikal Basnet</span>
+        </div>
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
+            <i class="fa-solid fa-user text-blue-400 text-2xl"></i>
+          </div>
+          <p class="text-gray-700 italic mb-2">"Nice view 🔥🔥🔥🔥"</p>
+          <span class="text-sm font-semibold text-gray-500">– Mercy Ikpe</span>
+        </div>
+        <!-- Testimonial 4 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
+            <i class="fa-solid fa-user text-blue-400 text-2xl"></i>
+          </div>
+          <p class="text-gray-700 italic mb-2">"oh very nice, I saw this in strava."</p>
+          <span class="text-sm font-semibold text-gray-500">– Bikal Basnet</span>
+        </div>
+        <!-- Testimonial 5 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center md:col-span-1 md:col-start-2">
+          <div class="w-12 h-12 bg-blue-100 rounded-full mb-3 flex items-center justify-center">
+            <i class="fa-solid fa-user text-blue-400 text-2xl"></i>
+          </div>
+          <p class="text-gray-700 italic mb-2">"Oh I wanted to build something like this, but with street view, so once can re-live/re-see walks and runs.<br><br>Pretty cool."</p>
+          <span class="text-sm font-semibold text-gray-500">– @divyenduz</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white mt-12 py-6">
+    <div class="max-w-4xl mx-auto px-4 flex flex-col items-center space-y-2">
+      <div class="flex items-center space-x-4 mb-1">
+        <!-- Social Links with Font Awesome -->
+        <a href="https://x.com/eswordert" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-blue-400" aria-label="Twitter" target="_blank" rel="noopener">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/activiews/" class="w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center text-pink-500" aria-label="Instagram" target="_blank" rel="noopener">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
+      <div class="flex items-center space-x-4 text-sm text-gray-500 mb-1">
+        <a href="terms.html" class="hover:underline">Terms & Conditions</a>
+        <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </div>
+      <div class="text-center text-xs text-gray-400 font-semibold tracking-wide mt-2">
+        Made with <span class="text-green-500">☘️</span> by © Ahmet Ömer 2025
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
