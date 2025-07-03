@@ -20,19 +20,54 @@
   <style>
     @keyframes pulse-green {
       0%, 100% {
-        transform: scale(1);
+        transform: scale(1) rotate(0deg);
       }
       50% {
-        transform: scale(1.05);
+        transform: scale(1.05) rotate(1deg);
       }
     }
     
     .pulse-green-animation {
-      animation: pulse-green 2s ease-in-out infinite, gradient-shift 3s ease infinite;
+      animation: pulse-green 3s ease-in-out infinite, gradient-shift 4s ease infinite, glow-pulse 2s ease-in-out infinite;
       border-radius: 8px;
-      padding: 3px;
+      padding: 4px;
+      background: linear-gradient(45deg, #10b981, #34d399, #059669, #22d3ee, #047857, #10b981);
+      background-size: 300% 300%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pulse-green-animation::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
       background: linear-gradient(45deg, #10b981, #34d399, #059669, #22d3ee, #047857);
-      background-size: 200% 200%;
+      background-size: 400% 400%;
+      animation: gradient-shift 3s ease infinite, rotate-gradient 8s linear infinite;
+      border-radius: 10px;
+      z-index: -1;
+      opacity: 0.7;
+    }
+    
+    @keyframes glow-pulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(16, 185, 129, 0.6), 0 0 60px rgba(34, 211, 158, 0.4);
+      }
+    }
+    
+    @keyframes rotate-gradient {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
     }
     
     .moving-green-gradient {
@@ -65,6 +100,74 @@
       font-style: normal;
       font-variation-settings: "wdth" 100;
     }
+    .phone-mockup-hover {
+      transition: transform 0.3s ease-in-out;
+    }
+    .phone-mockup-hover:hover {
+      transform: scale(1.05);
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+    }
+    .modal.show {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-content {
+      max-width: 95vw;
+      max-height: 95vh;
+      position: relative;
+      animation: modalFadeIn 0.3s ease-out;
+    }
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .modal-image {
+      width: auto;
+      height: auto;
+      max-width: 95vw;
+      max-height: 95vh;
+      border-radius: 12px;
+      object-fit: contain;
+    }
+    .close-modal {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      transition: background-color 0.2s;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .close-modal:hover {
+      color: rgb(157, 156, 156);
+    }
   </style>
 </head>
 <body class="bg-white text-gray-900 font-sans">
@@ -91,25 +194,39 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="max-w-3xl mx-auto px-4 py-16 text-center">
-    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Better fitness visuals for your Apple workouts</h1>
-    <p class="text-lg md:text-xl text-gray-600 mb-8">Turn your walking, running, and cycling workouts into visual memories. No account required. No server. Everything stays on your device. Activiews is your privacy-first fitness companion for beautiful workout maps, cards, and stats.</p>
+  <section class="max-w-5xl mx-auto px-4 py-16 text-center">
+    <h1 class="text-4xl md:text-5xl font-extrabold mb-4 asap-navbar-logo">Better fitness visuals for your Apple workouts</h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-8">Own your data. Keep your memories. Activiews is a privacy-first fitness companion for your Apple workouts that helps you visualize and track your activities.</p>
     <div class="flex justify-center mb-8">
       <!-- App Store Badge -->
       <a href="https://apps.apple.com/de/app/activiews/id6747010245" class="inline-block pulse-green-animation" target="_blank" rel="noopener">
         <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14" style="border-radius: 8px;">
       </a>
     </div>
-    <!-- Screenshot Banner -->
+    <!-- Phone Mockups -->
     <div class="w-full flex items-center justify-center mb-8">
-      <img src="assets/banner.png" alt="App Screenshots Banner" class="max-w-full h-auto rounded-xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-6xl">
+        <img src="assets/phone/card-portrait.png" alt="Activiews Card View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/card-portrait.png', 'Activiews Card View')">
+        <img src="assets/phone/home-portrait.png" alt="Activiews Home Screen" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/home-portrait.png', 'Activiews Home Screen')">
+        <img src="assets/phone/map-portrait.png" alt="Activiews Map View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/map-portrait.png', 'Activiews Map View')">
+        <img src="assets/phone/calendar-portrait.png" alt="Activiews Calendar View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/calendar-portrait.png', 'Activiews Calendar View')">
+        <img src="assets/phone/flyover-portrait.png" alt="Activiews Flyover View" class="w-full h-auto rounded-xl phone-mockup-hover cursor-pointer max-w-xs mx-auto" onclick="openModal('assets/phone/flyover-portrait.png', 'Activiews Flyover View')">
+      </div>
     </div>
   </section>
+
+  <!-- Modal for Phone Images -->
+  <div id="phoneModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+    </div>
+  </div>
 
   <!-- Testimonials Section -->
   <section class="bg-gray-50 py-12">
     <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-2xl font-bold text-center mb-8">What Users Are Saying</h2>
+      <h2 class="text-2xl font-bold text-center mb-8 asap-navbar-logo">What Users Are Saying</h2>
       <div class="grid md:grid-cols-3 gap-6">
         <!-- Testimonial 1 -->
         <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
@@ -177,5 +294,41 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    function openModal(imageSrc, imageAlt) {
+      const modal = document.getElementById('phoneModal');
+      const modalImage = document.getElementById('modalImage');
+      
+      modalImage.src = imageSrc;
+      modalImage.alt = imageAlt;
+      modal.classList.add('show');
+      
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+    
+    function closeModal() {
+      const modal = document.getElementById('phoneModal');
+      modal.classList.remove('show');
+      
+      // Restore body scroll
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Close modal when clicking on backdrop
+    document.getElementById('phoneModal').addEventListener('click', function(e) {
+      if (e.target === this) {
+        closeModal();
+      }
+    });
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
