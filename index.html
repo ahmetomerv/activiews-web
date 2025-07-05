@@ -215,13 +215,151 @@
     </div>
   </section>
 
-  <!-- Modal for Phone Images -->
-  <div id="phoneModal" class="modal">
-    <div class="modal-content">
-      <button class="close-modal" onclick="closeModal()">&times;</button>
-      <img id="modalImage" class="modal-image" src="" alt="">
+  <!-- Features Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-4 asap-navbar-logo">Key Features</h2>
+      <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Turn every workout into a nice visual story while keeping your data private and secure</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Beautiful Workout Maps & Cards -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-green-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-map text-green-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Beautiful Workout Maps & Cards</h3>
+          <p class="text-gray-600">Create high-resolution maps and themed cards for each activity: perfect for sharing or keeping as motivation.</p>
+        </div>
+
+        <!-- Workout Flyover -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-blue-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-plane text-blue-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Workout Flyover</h3>
+          <p class="text-gray-600">View your workouts from a dynamic top-down perspective, replaying your path with engaging animations.</p>
+        </div>
+
+        <!-- Activities Calendar -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-purple-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-calendar text-purple-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Activities Calendar</h3>
+          <p class="text-gray-600">See your workouts as a heatmap across months, tracking your progress over time.</p>
+        </div>
+
+        <!-- Private by Design -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-red-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-red-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Private by Design</h3>
+          <p class="text-gray-600">Reads your data securely from the Apple Health app. No account registration needed. No server communication. Nothing leaves your device.</p>
+        </div>
+
+        <!-- Dark & Light Themes -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-yellow-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-palette text-yellow-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Dark & Light Themes</h3>
+          <p class="text-gray-600">Customize your exports and in-app visuals to suit your mood or style, with adaptive themes and color pickers.</p>
+        </div>
+
+        <!-- Easy Export & Sharing -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-indigo-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-share-nodes text-indigo-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Easy Export & Sharing</h3>
+          <p class="text-gray-600">Save maps and cards to your photo library or share them with friends.
+          </p>
+        </div>
+
+        <!-- Stats That Matter -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-pink-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-chart-line text-pink-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Stats That Matter</h3>
+          <p class="text-gray-600">See distance, duration, calories burned, and heart rate stats with clean presentations.</p>
+        </div>
+
+        <!-- Flexible Pricing -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-orange-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-tags text-orange-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Flexible Pricing</h3>
+          <p class="text-gray-600">Choose what works for you: lifetime access for €24.99 or monthly pro subscription for €0.99. No hidden fees, cancel anytime.</p>
+        </div>
+
+        <!-- 12 Language Support -->
+        <div class="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-teal-100 rounded-lg mb-4 flex items-center justify-center">
+            <i class="fa-solid fa-globe text-teal-600 text-xl"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">12 Language Support</h3>
+          <p class="text-gray-600 mb-3">Available in multiple languages:</p>
+          <div class="grid grid-cols-3 gap-1 text-xs">
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇬🇧</span>
+              <span class="text-gray-700">English</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇪🇸</span>
+              <span class="text-gray-700">Spanish</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇫🇷</span>
+              <span class="text-gray-700">French</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇩🇪</span>
+              <span class="text-gray-700">German</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇵🇹</span>
+              <span class="text-gray-700">Portuguese</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇷🇺</span>
+              <span class="text-gray-700">Russian</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇮🇹</span>
+              <span class="text-gray-700">Italian</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇹🇷</span>
+              <span class="text-gray-700">Turkish</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇳🇱</span>
+              <span class="text-gray-700">Dutch</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇸🇪</span>
+              <span class="text-gray-700">Swedish</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇳🇴</span>
+              <span class="text-gray-700">Norwegian</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇩🇰</span>
+              <span class="text-gray-700">Danish</span>
+            </div>
+            <div class="flex items-center space-x-1">
+              <span class="text-base">🇫🇮</span>
+              <span class="text-gray-700">Finnish</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Testimonials Section -->
   <section class="bg-gray-50 py-12">
@@ -294,6 +432,14 @@
       </div>
     </div>
   </footer>
+
+  <!-- Modal for Phone Images -->
+  <div id="phoneModal" class="modal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+      <img id="modalImage" class="modal-image" src="" alt="">
+    </div>
+  </div>
 
   <script>
     function openModal(imageSrc, imageAlt) {
