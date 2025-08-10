@@ -4,24 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Activiews – Better fitness visuals for your Apple workouts</title>
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6X4CKM7CT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-T6X4CKM7CT');
-  </script>
-  
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
   <link rel="icon" href="assets/favicons/favicon.ico">
   <link rel="manifest" href="assets/favicons/site.webmanifest">
-  
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +26,7 @@
         transform: scale(1.03);
       }
     }
-    
+
     @keyframes pulse-green-hover {
       0%, 100% {
         transform: scale(1);
@@ -47,7 +37,7 @@
         opacity: 0.95;
       }
     }
-    
+
     .pulse-green-animation {
       animation: pulse-green 3s ease-in-out infinite, gradient-shift 4s ease infinite, glow-pulse 2s ease-in-out infinite;
       border-radius: 8px;
@@ -58,7 +48,7 @@
       overflow: hidden;
       transition: all 0.4s ease-in-out, box-shadow 0.5s ease-in-out, background 0.6s ease-in-out;
     }
-    
+
     .pulse-green-animation::before {
       content: '';
       position: absolute;
@@ -74,12 +64,12 @@
       opacity: 0.8;
       transition: all 0.4s ease-in-out, background 0.6s ease-in-out, opacity 0.4s ease-in-out;
     }
-    
+
     .pulse-green-animation:hover {
       animation: pulse-green-hover 2s ease-in-out infinite, gradient-shift-hover 2s ease infinite, glow-pulse-hover 1.5s ease-in-out infinite;
       transition: all 0.4s ease-in-out, box-shadow 0.5s ease-in-out, background 0.6s ease-in-out;
     }
-    
+
     .pulse-green-animation:hover::before {
       background: linear-gradient(45deg, #9BC53D, #7CB342, #5D8C46, #4CAF50, #388E3C, #9BC53D);
       background-size: 300% 300%;
@@ -87,7 +77,7 @@
       opacity: 1;
       transition: all 0.4s ease-in-out, background 0.6s ease-in-out, opacity 0.4s ease-in-out;
     }
-    
+
     @keyframes glow-pulse {
       0%, 100% {
         box-shadow: 0 0 20px rgba(193, 227, 160, 0.4);
@@ -96,7 +86,7 @@
         box-shadow: 0 0 40px rgba(193, 227, 160, 0.7), 0 0 60px rgba(168, 216, 140, 0.5);
       }
     }
-    
+
     @keyframes rotate-gradient {
       0% {
         transform: rotate(0deg);
@@ -105,7 +95,7 @@
         transform: rotate(360deg);
       }
     }
-    
+
     @keyframes gradient-shift-hover {
       0% {
         background-position: 0% 50%;
@@ -117,7 +107,7 @@
         background-position: 0% 50%;
       }
     }
-    
+
     @keyframes rotate-gradient-hover {
       0% {
         transform: rotate(0deg);
@@ -126,9 +116,7 @@
         transform: rotate(360deg);
       }
     }
-    
 
-    
     @keyframes glow-pulse-hover {
       0%, 100% {
         box-shadow: 0 0 25px rgba(155, 197, 61, 0.5);
@@ -137,13 +125,13 @@
         box-shadow: 0 0 50px rgba(155, 197, 61, 0.8), 0 0 70px rgba(124, 179, 66, 0.6);
       }
     }
-    
+
     .moving-green-gradient {
       background: linear-gradient(45deg, #10b981, #059669, #047857, #065f46, #064e3b);
       background-size: 400% 400%;
       animation: gradient-shift 3s ease infinite;
     }
-    
+
     @keyframes gradient-shift {
       0% {
         background-position: 0% 50%;
@@ -248,7 +236,7 @@
       background-position: 0 0, 0 0, 0 0, 0 0;
       position: relative;
     }
-    
+
     .hero-map-background::before {
       content: '';
       position: absolute;
@@ -268,7 +256,7 @@
       z-index: 0;
       animation: map-color-shift 15s ease-in-out infinite;
     }
-    
+
     @keyframes map-color-shift {
       0%, 100% {
         background-image: 
@@ -301,12 +289,20 @@
           );
       }
     }
-    
+
     .hero-map-background > * {
       position: relative;
       z-index: 1;
     }
   </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6X4CKM7CT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T6X4CKM7CT');
+  </script>
 </head>
 <body class="bg-white text-gray-900 font-sans">
   <!-- Navbar -->
