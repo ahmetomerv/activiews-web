@@ -1,6 +1,6 @@
 # Activiews website
 
-Static HTML and shared CSS, served directly without a framework, compilation, or production build step. Publish the four root HTML files and `assets/` using the existing static hosting configuration; test tooling is not part of the website runtime.
+Static HTML and shared CSS, served directly without a framework, compilation, or production build step. Publish the four root HTML files and `assets/` using the existing static hosting configuration.
 
 ## Optional website analytics
 
@@ -10,16 +10,4 @@ Preferences use `activiews.umami-consent.v1` in local storage. Rejection is reme
 
 The linked website section in `privacy.html` covers hosting, indefinite retention, preferences and withdrawal. Existing iOS app Firebase disclosures are separate and retained.
 
-## Verification
-
-Requires Node.js, Python 3 and installed Google Chrome.
-
-```sh
-npm ci
-npm run check
-npm test
-```
-
-Playwright serves the unchanged static production files locally. Tests fetch the hosted SDK code and intercept **every** browser request to the analytics host, fulfilling pageview submissions locally so tests do not enter production statistics. Tests require network access to download the SDK; they fail rather than substitute a mock tracker. Screenshots are written under ignored `test-results/`.
-
-There is no production build, lint or typecheck pipeline in this static project. `npm run check` validates the shared controller's syntax, and `npm test` verifies the served production files in real Chromium (Google Chrome).
+No package installation or build command is required.
