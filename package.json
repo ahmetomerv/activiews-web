@@ -1,0 +1,9 @@
+{
+  "name": "activiews-web",
+  "private": true,
+  "scripts": {
+    "check": "node --check assets/analytics.js",
+    "test": "playwright test"
+  },
+  "devDependencies": { "@playwright/test": "1.56.1" }
+}

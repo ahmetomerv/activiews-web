@@ -16,14 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T6X4CKM7CT"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T6X4CKM7CT');
-  </script>
+  <script defer src="assets/analytics.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -44,12 +37,13 @@
   <section class="document">
     <div class="document-body">
       <h1>Privacy Policy</h1>
-      <p class="effective-date">Effective Date: June 29, 2025</p>
+      <p class="effective-date">App policy effective: June 29, 2025 · Website analytics updated: November 5, 2026</p>
       <p><strong>App Name:</strong> Activiews</p>
       <p><strong>Developer:</strong> Ahmet Ömer</p>
       <hr>
+      <p>This notice covers the Activiews app and website. Sections 1–10 describe the app; the separate website analytics section below describes optional website pageviews.</p>
       <h2>1. Overview</h2>
-      <p>Activiews is designed with your privacy in mind. This Privacy Policy explains how your data is handled. In short: we do not collect, store, or share any personal information that can identify you. The app runs primarily offline (but requires internet for map access), with no server communication or user tracking that links to your identity. It is built to function transparently and securely on your device only.</p>
+      <p>The Activiews app is designed with your privacy in mind. The following app disclosures explain how app data is handled. The app does not collect, store, or share personal information that can identify you. The app runs primarily offline (but requires internet for map access), with no server communication or user tracking that links to your identity. It is built to function transparently and securely on your device only.</p>
       <hr>
       <h2>2. Minimal Data Collection (Anonymous Analytics)</h2>
       <p>To improve app performance and understand how features are used, <strong>Activiews uses Firebase Analytics</strong>. This tool collects <strong>anonymous usage data</strong> only.</p>
@@ -111,6 +105,17 @@
       <h2>9. Changes to This Policy</h2>
       <p>If there are changes to data handling practices, we will update this Privacy Policy. Updates will be posted within the app and/or on the App Store listing. Continued use of Activiews implies acceptance of the updated terms.</p>
       <hr>
+      <h2 id="website-analytics">Website analytics (optional)</h2>
+      <p><strong>Controller:</strong> Ahmet Ömer, reachable at <a href="mailto:hi@ahmeto.com">hi@ahmeto.com</a>. Website analytics are separate from the app analytics described above.</p>
+      <p>With your consent, this website uses Umami at <strong>analytics.ahmeto.com</strong> to understand visits and improve the website. Umami is self-hosted on Ahmet Ömer’s Hetzner server in <strong>Germany</strong>. The analytics script is loaded and pageviews are sent only after you select <strong>Allow analytics</strong>. Analytics are optional; declining does not affect access.</p>
+      <p><strong>Data processed:</strong> visited page paths and titles, referring page addresses, visit times, browser language and screen size. Query strings and fragments are removed from page and referrer addresses. The analytics server receives the IP address and browser user agent as part of the connection; Umami uses these to derive browser, operating system, device and approximate location information and a rotating hashed session identifier. No user ID is supplied. This integration sends basic pageviews only, with no custom events, session recordings, or optional performance or error tracking.</p>
+      <p><strong>Legal basis:</strong> your consent under Article 6(1)(a) GDPR for analytics processing and, where applicable, consent for access to information on your device. No Umami request is made before consent. Umami does not use analytics cookies.</p>
+      <p><strong>Preference storage:</strong> the website stores “accepted” or “declined” in your browser’s local storage under <code>activiews.umami-consent.v1</code>, separately from any earlier analytics consent. Both choices are remembered until you change them or clear your browser storage. A session-storage blocking flag may also be used to keep analytics off. These preferences are used only to manage your choice. Saved changes apply across tabs of the same browser and website.</p>
+      <p><strong>Change or withdraw consent:</strong> use <strong>Analytics preferences</strong> in any page’s footer, then select <strong>Decline</strong> to stop future tracking. You can allow analytics again there. Withdrawal does not affect the lawfulness of earlier processing or automatically delete previously collected analytics. If browser storage is unavailable, analytics remain blocked on the current page and a message explains that the choice could not be saved. A later visit may ask again or use an older saved choice if no blocking preference could be stored.</p>
+      <p><strong>Retention:</strong> analytics data is retained indefinitely unless manually deleted.</p>
+      <p><strong>Your rights:</strong> where applicable under the GDPR, you may request access, correction, erasure, restriction of processing or data portability, and object to processing where that right applies. You may withdraw consent at any time and lodge a complaint with a data protection supervisory authority. Contact <a href="mailto:hi@ahmeto.com">hi@ahmeto.com</a> to exercise your rights. Because no user ID is supplied, it may not be possible to associate stored analytics with you.</p>
+      <p>This website also loads the existing Google Fonts stylesheets and Font Awesome stylesheet from their respective providers. Those requests occur independently of optional analytics and disclose connection information such as your IP address to those providers.</p>
+      <hr>
       <h2>10. Contact</h2>
       <p><strong>Ahmet Ömer</strong></p>
       <p><span class="monochrome-emoji">📧</span> <strong>Email:</strong> <a href="mailto:hi@ahmeto.com">hi@ahmeto.com</a></p>
@@ -126,6 +131,7 @@
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="contact.html">Contact</a>
+        <button type="button" class="analytics-preferences" data-analytics-preferences aria-controls="analytics-banner" aria-expanded="false" hidden>Analytics preferences</button>
       </div>
       <div class="footer-credit">
         Made with <span class="monochrome-emoji">☘️</span> by © <a href="https://ahmeto.com/" target="_blank" rel="noopener">Ahmet Ömer</a> 2026

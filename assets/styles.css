@@ -179,3 +179,44 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* Optional analytics share the site's frame, typography and outline controls. */
+.analytics-banner {
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: min(var(--frame), 100%);
+  margin-inline: auto;
+  padding: 20px var(--gutter);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  box-shadow: 0 -4px 20px rgb(0 0 0 / 5%);
+}
+.analytics-banner[hidden], .analytics-preferences[hidden] { display: none; }
+.analytics-copy { flex: 1; }
+.analytics-copy h2 { font-size: 15px; font-weight: 600; }
+.analytics-copy p { margin-top: 6px; color: var(--muted); font-size: 13px; }
+.analytics-copy a { text-decoration: underline; text-underline-offset: 3px; }
+.analytics-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.analytics-choice {
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid currentColor;
+  background: var(--paper);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.analytics-allow { color: #237341; }
+.analytics-decline { color: var(--muted); }
+.analytics-choice:hover { background: var(--wash); }
+.analytics-preferences { border: 0; padding: 0; background: none; font: inherit; cursor: pointer; }
+.analytics-preferences:hover { text-decoration: underline; text-underline-offset: 4px; }
+.analytics-status { font-size: 12px; color: var(--muted); }
+.analytics-status:empty { display: none; }
+@media (max-width: 700px) {
+  .analytics-banner { flex-direction: column; align-items: stretch; gap: 14px; padding-block: 16px; }
+}
